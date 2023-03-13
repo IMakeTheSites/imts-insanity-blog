@@ -1,0 +1,35 @@
+@import './globals.scss';
+
+.ClientLogos {
+  background-color: $gray;
+  min-height: 18.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding: 0 2rem;
+  }
+
+  img {
+    width: 100%;
+
+    @media only screen and (max-width: 850px) {
+      width: 80%;
+    }
+  }
+
+  &__logo3,
+  &__logo4 {
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+}

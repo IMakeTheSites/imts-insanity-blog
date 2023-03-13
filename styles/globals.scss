@@ -1,0 +1,36 @@
+$light-green: #3ab982;
+$dark-blue: #34495f;
+$gray: #c1c4ce;
+$dark-gray: #8c8c8c;
+$light-gray: #eaebee;
+
+@mixin blueHeading {
+  font-family: 'Abril Fatface';
+  font-size: 6.4rem;
+  color: $dark-blue;
+}
+
+@mixin blueButton {
+  padding: 1.9rem 5.3rem;
+  font-size: 1.8rem;
+  color: white;
+  background-color: $dark-blue;
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @media only screen and (max-width: 800px) {
+    padding: 1.5rem 4rem;
+  }
+}
+
+@mixin shadow {
+  -webkit-box-shadow: 3px 5px 7px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 3px 5px 7px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 3px 5px 7px 0px rgba(0, 0, 0, 0.4);
+}

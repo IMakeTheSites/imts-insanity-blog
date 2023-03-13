@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Worklete",
+    "position": "React/React-Native Developer",
+    "imageUrl": "~/public/portfolio1.png"
+  },
+  {
+    "id": 2,
+    "name": "Rolfson Oil",
+    "position": "React/React-Native Developer",
+    "imageUrl": "~/public/portfolio2.png"
+  }
+]

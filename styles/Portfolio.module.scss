@@ -1,0 +1,64 @@
+@import './globals.scss';
+
+.Portfolio {
+  background-color: $light-green;
+  padding: 12.5rem 11.2rem;
+  display: flex;
+
+  @media only screen and (max-width: 1255px) {
+    flex-direction: column;
+    padding: 12.5rem 2rem;
+  }
+
+  &__details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media only screen and (max-width: 1255px) {
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 8.4rem;
+      font-family: 'Abril Fatface';
+      color: white;
+
+      @media only screen and (max-width: 800px) {
+        font-size: 4rem;
+      }
+    }
+
+    p {
+      font-size: 3.6rem;
+      color: white;
+      margin-top: 1.3rem;
+
+      @media only screen and (max-width: 800px) {
+        font-size: 3.6rem;
+      }
+    }
+
+    button {
+      @include blueButton;
+      -webkit-box-shadow: 3px 3px 0px 0px white;
+      -moz-box-shadow: 3px 3px 0px 0px white;
+      box-shadow: 3px 3px 0px 0px white;
+      margin-top: 7rem;
+    }
+  }
+
+  &__items {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (max-width: 800px) {
+      align-items: center;
+      margin-bottom: 2rem;
+      flex-direction: column;
+    }
+  }
+}

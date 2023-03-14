@@ -25,8 +25,6 @@ function Portfolio() {
           img={Portfolio1}
           name="Worklete"
           job="React-Native Developer"
-          width={354}
-          height={292}
         />
         <PortfolioCard
           img={Portfolio2}

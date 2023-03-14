@@ -11,6 +11,9 @@ function NavBar() {
           <Link href="/blog">Blog</Link>
         </li>
         <li>
+          <Link href="/portfolio">Portfolio</Link>
+        </li>
+        <li>
           <Link href="/about">About</Link>
         </li>
         <li>

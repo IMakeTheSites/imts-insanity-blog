@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import classes from '../styles/PortfolioItem.module.scss';
 
 function PortfolioCard(props) {
   return (

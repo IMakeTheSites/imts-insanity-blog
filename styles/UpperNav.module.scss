@@ -1,0 +1,60 @@
+@import './globals.scss';
+
+.Uppernav {
+  width: 100%;
+  min-height: 5.2rem;
+  padding: 1.2rem 13.8rem;
+  background-color: $light-green;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  @media only screen and (max-width: 846px) {
+    padding: 1.2rem 2rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding: 1rem 2rem;
+    flex-direction: column;
+    min-height: 7.4rem;
+  }
+
+  &__contact {
+    display: flex;
+
+    a {
+      color: white;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-decoration: none;
+
+      @media only screen and (max-width: 462px) {
+        font-size: 1rem;
+      }
+    }
+
+    &__num {
+      margin-right: 7.4rem;
+    }
+  }
+
+  &__icons {
+    @media only screen and (max-width: 600px) {
+      margin-top: 2rem;
+    }
+
+    &__icon {
+      margin-right: 1.4rem;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+
+      @media only screen and (max-width: 462px) {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+}

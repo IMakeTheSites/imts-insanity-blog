@@ -9,7 +9,7 @@ function Page({ title, children }) {
       </Head>
       <header></header>
       <main className="px-6 py-4">
-        <Title>{title}</Title>
+        {/* <Title>{title}</Title> */}
         {children}
       </main>
     </>

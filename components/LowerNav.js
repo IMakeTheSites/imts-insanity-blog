@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Logo from '../pages/IMTSlogo.png';
+import Logo from '../public/IMTSlogo.png';
 import classes from '../styles/LowerNav.module.scss';
 import { useState } from 'react';
 

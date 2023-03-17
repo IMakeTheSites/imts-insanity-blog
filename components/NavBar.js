@@ -1,11 +1,13 @@
 import Link from 'next/link';
+import LowerNav from './LowerNav';
 import UpperNav from './UpperNav';
 
 function NavBar() {
   return (
     <>
+      {/* <LowerNav /> */}
       <UpperNav />
-      <nav className="px-2 py-1 text-sm">
+      {/* <nav className="px-2 py-1 text-sm">
         <ul className="flex gap-2">
           <li className="text-lg font-extrabold">
             <Link href="/">Home</Link>
@@ -23,7 +25,7 @@ function NavBar() {
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </>
   );
 }

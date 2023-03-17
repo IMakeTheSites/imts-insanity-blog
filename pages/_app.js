@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import NavBar from '../components/NavBar';
 import '@/styles/globals.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+config.autoAddCss = false;
 
 function App({ Component, pageProps }) {
   return (
@@ -25,9 +28,8 @@ function App({ Component, pageProps }) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <header>
-        <NavBar />
-      </header>
+      <header></header>
+      <NavBar />
       <Component {...pageProps} />
     </>
   );

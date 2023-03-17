@@ -1,0 +1,39 @@
+@import './globals.scss';
+
+.Feature {
+  height: 33.3rem;
+  border: 1px solid $gray;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    @include shadow;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: $dark-blue;
+
+    @media only screen and (max-width: 570px) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    color: $light-green;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+
+    @media only screen and (max-width: 570px) {
+      font-size: 1.5rem;
+    }
+  }
+}

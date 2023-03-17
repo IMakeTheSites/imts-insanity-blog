@@ -1,5 +1,6 @@
 import ClientLogos from '@/components/ClientLogos';
 import Features from '@/components/Features';
+import GetStarted from '@/components/GetStarted';
 import Page from '@/components/Page';
 import Portfolio from '@/components/Portfolio';
 import Slider from '@/components/Slider';
@@ -13,6 +14,7 @@ function HomePage() {
       <Portfolio />
       <Features />
       <Testimonial />
+      <GetStarted />
     </Page>
   );
 }

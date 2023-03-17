@@ -1,0 +1,53 @@
+@import './globals.scss';
+
+.testimonial {
+  background-image: url('../public/sliderbg.png');
+  background-color: $dark-blue;
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  h2 {
+    font-size: 6.4rem;
+    color: white;
+    font-family: 'Abril Fatface';
+    margin-bottom: 6rem;
+
+    @media only screen and (max-width: 650px) {
+      font-size: 3rem;
+    }
+  }
+}
+
+.carousel .slide {
+  background: #fff !important;
+  color: black;
+  height: 100%;
+}
+
+.myCarousel {
+  background: transparent;
+  width: 54%;
+  margin: 0 auto;
+
+  img {
+    width: 8rem !important;
+  }
+
+  h3 {
+    color: white !important;
+    font-size: 1.8rem !important;
+    text-transform: none !important;
+    font-weight: 400 !important;
+    margin-top: 3rem;
+  }
+
+  p {
+    font-size: 1.2rem !important;
+    color: white !important;
+    margin-top: 3rem;
+  }
+}

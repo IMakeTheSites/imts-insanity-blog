@@ -3,6 +3,7 @@ import Features from '@/components/Features';
 import Page from '@/components/Page';
 import Portfolio from '@/components/Portfolio';
 import Slider from '@/components/Slider';
+import Testimonial from '@/components/Testimonial';
 
 function HomePage() {
   return (
@@ -11,6 +12,7 @@ function HomePage() {
       <ClientLogos />
       <Portfolio />
       <Features />
+      <Testimonial />
     </Page>
   );
 }

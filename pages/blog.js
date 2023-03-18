@@ -2,10 +2,14 @@ import Page from '@/components/Page';
 import Link from 'next/link';
 import groq from 'groq';
 import client from '@/client';
+import GlobalHeader from '@/components/GlobalHeader';
+import ClientLogos from '@/components/ClientLogos';
+import Testimonial from '@/components/Testimonial';
 
 function BlogPage({ posts }) {
   return (
     <Page title="Blog">
+      <GlobalHeader name="Blog" />
       {posts.length > 0 &&
         posts.map(
           ({ _id, title = '', slug = '', publishedAt = '' }) =>
@@ -18,6 +22,8 @@ function BlogPage({ posts }) {
               </li>
             )
         )}
+      <ClientLogos />
+      <Testimonial />
     </Page>
   );
 }

@@ -1,0 +1,11 @@
+.Work {
+  &__list {
+    padding: 8rem 12.4rem;
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: 850px) {
+      padding: 8rem 2rem;
+    }
+  }
+}

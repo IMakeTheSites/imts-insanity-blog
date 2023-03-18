@@ -1,4 +1,3 @@
-import GlobalHeader from '@/components/GlobalHeader';
 import Page from '@/components/Page';
 import classes from '../styles/About.module.scss';
 import Mark from '../public/mark.png';
@@ -6,6 +5,7 @@ import Image from 'next/image';
 import ClientLogos from '@/components/ClientLogos';
 import Testimonial from '@/components/Testimonial';
 import Link from 'next/link';
+import GlobalHeader from '@/components/GlobalHeader';
 
 function AboutPage() {
   return (

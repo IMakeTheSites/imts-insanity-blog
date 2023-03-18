@@ -1,0 +1,86 @@
+@import './globals.scss';
+
+.Work__item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $light-gray;
+  padding: 3rem 0;
+
+  @media only screen and (max-width: 850px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 32.9rem;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 4rem;
+    max-width: 85rem;
+
+    @media only screen and (max-width: 850px) {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+    }
+
+    &__heading {
+      font-size: 3.6rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: capitalize;
+
+      @media only screen and (max-width: 850px) {
+        margin-top: 1.5rem;
+        font-size: 3rem;
+      }
+    }
+
+    &__job {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: $dark-gray;
+      margin-bottom: 1rem;
+      text-transform: capitalize;
+    }
+
+    &__content {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 3rem;
+
+      @media only screen and (max-width: 850px) {
+        text-align: center;
+      }
+    }
+
+    &__button {
+      border: none;
+      background-color: $light-green;
+      padding: 0.8rem 3.5rem;
+      color: white;
+      text-transform: capitalize;
+      font-size: 1.8rem;
+      font-weight: 500;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        border: 1px solid $light-green;
+        background-color: #fff;
+        color: $light-green;
+      }
+    }
+  }
+}

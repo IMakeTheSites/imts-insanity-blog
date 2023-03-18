@@ -1,0 +1,67 @@
+@import './globals.scss';
+
+.Inquiry__form {
+  flex: 2;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.8rem;
+  row-gap: 2.2rem;
+
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+  }
+
+  input {
+    height: 6rem;
+    border: solid;
+    border-radius: 5px;
+    padding-left: 1rem;
+    width: 100%;
+    font-size: 2rem;
+
+    @media only screen and (max-width: 800px) {
+      padding-left: 1rem;
+    }
+
+    &::placeholder {
+      color: black;
+      opacity: 0.8;
+      font-size: 1.8rem;
+    }
+  }
+
+  textarea {
+    height: 12rem;
+    border: solid;
+    border-radius: 5px;
+    padding: 1rem;
+    font-size: 2rem;
+
+    &::placeholder {
+      color: black;
+      opacity: 0.8;
+      font-size: 1.8rem;
+    }
+  }
+
+  & *:nth-child(5) {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+  }
+
+  & *:nth-child(6) {
+    grid-row: 4;
+    grid-column: 1 / span 2;
+  }
+
+  button {
+    @include blueButton;
+    width: 20rem;
+
+    @media only screen and (max-width: 800px) {
+      grid-column: 1 / span 2;
+      width: 100%;
+    }
+  }
+}

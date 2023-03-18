@@ -1,0 +1,89 @@
+@import './globals.scss';
+
+.Contact {
+  &__form {
+    margin: 5rem auto;
+    padding: 8rem;
+    border: 1px solid $light-gray;
+    max-width: 106rem;
+
+    @media only screen and (max-width: 750px) {
+      padding: 8rem 1rem;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 0.5rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+
+      span {
+        color: $dark-gray;
+      }
+    }
+  }
+
+  input,
+  textarea {
+    border: 1px solid black;
+  }
+
+  &__touch {
+    margin: 5rem auto;
+    padding: 8rem;
+    border: 1px solid $light-gray;
+    max-width: 106rem;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: 900px) {
+      padding: 8rem 1rem;
+      flex-direction: column;
+    }
+
+    input,
+    textarea {
+      border: 1px solid $light-gray;
+
+      &::placeholder {
+        color: $dark-gray;
+      }
+    }
+
+    h2 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: $dark-blue;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.9rem;
+      font-weight: 400;
+      margin-bottom: 4rem;
+    }
+
+    &__map {
+      margin-left: 6rem;
+
+      @media only screen and (max-width: 900px) {
+        margin-top: 3rem;
+        width: 100%;
+        margin-left: 0rem;
+      }
+
+      iframe {
+        width: 40rem;
+        height: 40rem;
+
+        @media only screen and (max-width: 900px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

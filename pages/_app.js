@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar';
 import '@/styles/globals.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import Footer from '@/components/Footer';
 config.autoAddCss = false;
 
 function App({ Component, pageProps }) {
@@ -31,6 +32,7 @@ function App({ Component, pageProps }) {
       <header></header>
       <NavBar />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

@@ -1,0 +1,85 @@
+@import './globals.scss';
+
+.About {
+  padding: 4rem 11rem;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  column-gap: 8.3rem;
+  row-gap: 5rem;
+  align-items: start;
+
+  @media only screen and (max-width: 2025px) {
+    grid-template-columns: 1fr;
+    padding: 4rem 3rem;
+  }
+
+  &__heading2 {
+    font-size: 4rem;
+    font-family: 'Abril Fatface';
+    color: $dark-blue;
+    margin: 0;
+    padding: 0;
+
+    @media only screen and (max-width: 2025px) {
+      font-size: 3rem;
+    }
+  }
+
+  &__heading3 {
+    font-size: 3rem;
+    font-family: 'Abril Fatface';
+    color: $light-green;
+    padding: 1rem 0;
+    display: flex;
+    align-items: flex-end;
+    align-self: stretch;
+
+    @media only screen and (max-width: 2025px) {
+      font-size: 2rem;
+    }
+  }
+
+  &__image {
+    border-radius: 1.7rem;
+    -webkit-box-shadow: 11px 11px 0px 0px $light-green;
+    -moz-box-shadow: 11px 11px 0px 0px $light-green;
+    box-shadow: 11px 11px 0px 0px $light-green;
+
+    img {
+      width: 100%;
+      object-position: top center;
+      object-fit: cover;
+    }
+  }
+
+  &__paragraph {
+    font-size: 1.6rem;
+    line-height: 3.4rem;
+    font-weight: 500;
+
+    @media only screen and (max-width: 2025px) {
+      text-align: center;
+    }
+  }
+  &__text {
+    display: flex;
+    justify-content: center;
+    padding: 8rem;
+
+    p {
+      text-align: center;
+      font-weight: 500;
+      line-height: 3.4rem;
+      font-size: 1.6rem;
+    }
+    ul {
+      font-weight: 500;
+      line-height: 3.4rem;
+      font-size: 1.6rem;
+    }
+  }
+  li {
+    background-color: $light-green;
+    text-align: left;
+  }
+}

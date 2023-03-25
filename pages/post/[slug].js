@@ -1,5 +1,3 @@
-// import groq from 'groq';
-import { useEffect, useState } from 'react';
 import SanityBlockContent from '@sanity/block-content-to-react';
 import { useNextSanityImage } from 'next-sanity-image';
 import Link from 'next/link';

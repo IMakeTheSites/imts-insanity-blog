@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Page from '@/components/Page';
-import Link from 'next/link';
 import GlobalHeader from '@/components/GlobalHeader';
 import ClientLogos from '@/components/ClientLogos';
 import Testimonial from '@/components/Testimonial';

@@ -13,10 +13,7 @@ function PostCard(props) {
   return (
     <div className="border my-4 w-80 shadow hover:shadow-xl">
       <div>
-        {post.mainImage && (
-          // <img src={post.mainImage} />
-          <Image {...imageProps} layout="intrinsic" alt="" />
-        )}
+        {post.mainImage && <Image {...imageProps} layout="intrinsic" alt="" />}
         <div className="p-2 flex justify-between items-baseline">
           <h2 className="text-lg font-bold">{post.title}</h2>
           <p className="text-md">{post.excerpt}</p>

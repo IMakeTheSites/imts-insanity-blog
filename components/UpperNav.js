@@ -58,7 +58,6 @@ function UpperNav() {
             <li className="text-white text-md font-bold">
               <a href="mailto: info@imakethesites.com">Email</a>
             </li>
-            {/* <div className="mr-4 w-6 h-4 cursor-pointer"> */}
             <li>
               <a href="https://www.facebook.com/imakethesites" target="_blank">
                 <svg
@@ -157,7 +156,6 @@ function UpperNav() {
           </svg>
         </div>
       </nav>
-      {/* <LowerNav /> */}
     </>
   );
 }

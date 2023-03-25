@@ -4,7 +4,7 @@ const nextConfig = {
 };
 
 module.exports = {
-  // images: {
-  //   domains: ['localhost'],
-  // },
+  images: {
+    domains: ['cdn.sanity.io'],
+  },
 };

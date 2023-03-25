@@ -9,7 +9,7 @@ function UpperNav() {
 
   return (
     <>
-      <nav className="bg-light-green w-full min-h-1 px-5 py-5 justify-between relative ">
+      <nav className="bg-light-green w-full min-h-1 px-4 py-5 justify-between relative ">
         <div className="flex flex-row gap-1">
           <ul
             className={
@@ -56,7 +56,7 @@ function UpperNav() {
               <Link href="/contact">Contact</Link>
             </li>
             <li className="text-white text-md font-bold">
-              <a href="mailto: info@imakethesites.com">Email us! </a>
+              <a href="mailto: info@imakethesites.com">Email</a>
             </li>
             {/* <div className="mr-4 w-6 h-4 cursor-pointer"> */}
             <li>

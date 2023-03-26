@@ -9,42 +9,10 @@ function ContactPage() {
       <div className={classes.Contact}>
         <GlobalHeader name="Contact" />
         <section className={classes.Contact__form}>
-          <Form>
-            <div className={classes.Contact__box}>
-              <label>
-                First Name <span>(required)</span>
-              </label>
-              <input type="text" />
-            </div>
-
-            <div className={classes.Contact__box}>
-              <label>
-                Last Name <span>(required)</span>
-              </label>
-              <input type="text" />
-            </div>
-
-            <div className={classes.Contact__box}>
-              <label>
-                Email Address <span>(required)</span>
-              </label>
-              <input type="text" />
-            </div>
-
-            <div className={classes.Contact__box}>
-              <label>What do you want to know?</label>
-              <input type="text" />
-            </div>
-
-            <div className={classes.Contact__box}>
-              <label>
-                Please tell us about your project and how I can help.
-              </label>
-              <textarea className={classes.text} />
-            </div>
-
-            <button>Submit</button>
-          </Form>
+          <h3 className="text-lg text-justify">
+            Please tell us about your project and how I can help.
+          </h3>
+          <Form />
         </section>
         <section className={classes.Contact__touch}>
           <div className={classes.Contact__touch__form}>

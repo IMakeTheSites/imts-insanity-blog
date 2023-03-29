@@ -4,34 +4,38 @@ import GlobalHeader from '@/components/GlobalHeader';
 import ClientLogos from '@/components/ClientLogos';
 import Testimonial from '@/components/Testimonial';
 import PostCard from '@/components/PostCard';
+import { loadData } from './api/post.js';
 
-function BlogPage({ posts }) {
-  const [mappedPosts, setMappedPosts] = useState([]);
+const LOAD_MORE_STEP = 4;
 
-  useEffect(() => {
-    if (posts.length) {
-      setMappedPosts(
-        posts.map((post) => {
-          return {
-            ...post,
-          };
-        })
-      );
-    } else {
-      setMappedPosts([]);
-    }
-  }, [posts]);
+export default function BlogPage({ initialPosts, total }) {
+  console.log('{initialPosts}', initialPosts);
+  // const [mappedPosts, setMappedPosts] = useState([]);
+
+  // useEffect(() => {
+  //   if (posts.length) {
+  //     setMappedPosts(
+  //       posts.map((post) => {
+  //         return {
+  //           ...post,
+  //         };
+  //       })
+  //     );
+  //   } else {
+  //     setMappedPosts([]);
+  //   }
+  // }, [posts]);
 
   return (
     <Page title="Blog">
       <GlobalHeader name="Blog" />
       <div className="container mx-auto">
         <div className="grid grid-rows-1">
-          {mappedPosts &&
+          {/* {mappedPosts &&
             mappedPosts.length &&
             mappedPosts.map((post, index) => (
               <PostCard data={post} key={index} />
-            ))}
+            ))} */}
         </div>
       </div>
       <ClientLogos />
@@ -41,25 +45,31 @@ function BlogPage({ posts }) {
 }
 
 export const getServerSideProps = async (context) => {
-  const query = encodeURIComponent(`*[_type == "post"]`);
-  const url = `${process.env.SANITY_URL}query=${query}`;
+  const { posts, total } = await loadData(0, LOAD_MORE_STEP);
 
-  const data = await fetch(url).then((res) => res.json());
-  const posts = data.result;
+  return {
+    props: {
+      initialPosts: posts,
+      total,
+    },
+  };
+  //   const query = encodeURIComponent(`*[_type == "post"]`);
+  //   const url = `${process.env.SANITY_URL}query=${query}`;
 
-  if (!posts || !posts.length === 0) {
-    return {
-      props: {
-        posts: [],
-      },
-    };
-  } else {
-    return {
-      props: {
-        posts,
-      },
-    };
-  }
+  //   const data = await fetch(url).then((res) => res.json());
+  //   const posts = data.result;
+
+  //   if (!posts || !posts.length === 0) {
+  //     return {
+  //       props: {
+  //         posts: [],
+  //       },
+  //     };
+  //   } else {
+  //     return {
+  //       props: {
+  //         posts,
+  //       },
+  //     };
+  //   }
 };
-
-export default BlogPage;

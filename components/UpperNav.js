@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import classes from '../styles/UpperNav.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '../public/IMTSlogo.png';
+import { AiOutlineMail } from 'react-icons/ai';
 
 function UpperNav() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -56,9 +57,14 @@ function UpperNav() {
               <Link href="/contact">Contact</Link>
             </li>
             <li className="text-white text-md font-bold">
-              <a href="mailto: info@imakethesites.com">Email</a>
+              <a href="mailto: info@imakethesites.com">
+                {React.createElement(AiOutlineMail, {
+                  color: 'black',
+                  size: 40,
+                })}
+              </a>
             </li>
-            <li>
+            {/* <li>
               <a href="https://www.facebook.com/imakethesites" target="_blank">
                 <svg
                   className={classes.Uppernav__icons__icon}
@@ -120,7 +126,7 @@ function UpperNav() {
                   />
                 </svg>{' '}
               </a>
-            </li>
+            </li> */}
             {/* </div> */}
           </ul>
           <svg

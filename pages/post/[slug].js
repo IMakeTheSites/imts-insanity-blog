@@ -1,4 +1,4 @@
-import SanityBlockContent from '@sanity/block-content-to-react';
+import BlockContent from '@sanity/block-content-to-react';
 import { useNextSanityImage } from 'next-sanity-image';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,7 +7,8 @@ import Article from '@/components/Article/Article';
 import Title from '@/components/Title/Title';
 import Content from '@/components/Content/Content';
 import styles from './PostStyles.module.scss';
-import { format, parseISO } from 'date-fns';
+import { format } from 'date-fns';
+
 // import styles
 
 const Post = ({ post }) => {
@@ -56,7 +57,7 @@ const Post = ({ post }) => {
 };
 
 export async function getStaticPaths() {
-  const query = `*[ _type == "post"] {
+  const query = `*[_type == "post"] {
     slug {
       current
     }
@@ -76,7 +77,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const query = `*[ _type == "post" && slug.current == "${slug}"][0]`;
+  const query = `*[_type == "post" && slug.current == "${slug}"][0]`;
 
   const post = await client.fetch(query);
 
@@ -85,36 +86,36 @@ export async function getStaticProps({ params: { slug } }) {
       post,
     },
   };
-
-  // const pageSlug = context.query.slug;
-
-  // if (!pageSlug) {
-  //   return {
-  //     notFound: true,
-  //   };
-  // }
-
-  // const query = encodeURIComponent(
-  //   `*[ _type == "post" && slug.current == "${pageSlug}"]`
-  // );
-  // const url = `${process.env.SANITY_URL}query=${query}`;
-
-  // const data = await fetch(url).then((res) => res.json());
-  // const post = data.result[0];
-
-  // if (!post) {
-  //   return {
-  //     notFound: true,
-  //   };
-  // } else {
-  //   return {
-  //     props: {
-  //       title: post.title,
-  //       body: post.body,
-  //       image: post.mainImage,
-  //     },
-  //   };
-  // }
 }
+
+// const pageSlug = context.query.slug;
+
+// if (!pageSlug) {
+//   return {
+//     notFound: true,
+//   };
+// }
+
+// const query = encodeURIComponent(
+//   `*[ _type == "post" && slug.current == "${pageSlug}"]`
+// );
+// const url = `${process.env.SANITY_URL}query=${query}`;
+
+// const data = await fetch(url).then((res) => res.json());
+// const post = data.result[0];
+
+// if (!post) {
+//   return {
+//     notFound: true,
+//   };
+// } else {
+//   return {
+//     props: {
+//       title: post.title,
+//       body: post.body,
+//       image: post.mainImage,
+//     },
+//   };
+// }
 
 export default Post;

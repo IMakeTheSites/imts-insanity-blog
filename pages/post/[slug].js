@@ -70,7 +70,7 @@ const Post = ({ className, post }) => {
         <div className={cl(className, styles.content)}>
           {imageUrl && (
             <div className={cl(className, styles.content)}>
-              <img src={urlFor(imageUrl).url()} alt={`${title}`} />
+              <img src={urlFor(imageUrl).url()} alt="" />
             </div>
           )}
           <PortableText value={body} components={ptComponents} />

@@ -7,6 +7,8 @@ import Title from '@/components/Title/Title';
 import styles from './PostStyles.module.scss';
 import groq from 'groq';
 import cl from 'classnames';
+import Section from '@/components/Section/Section';
+import Cover from '@/components/Cover/Cover';
 import React from 'react';
 import { FaGreaterThan } from 'react-icons/fa';
 
@@ -60,6 +62,9 @@ const Post = ({ className, post }) => {
           </li>
         </ol>
       </nav>
+      <Section>
+        <Cover title="New Post" />
+      </Section>
       <Article className={styles.post}>
         <Title className={styles.postTitle}>{title}</Title>
         <div className={cl(className, styles.content)}>

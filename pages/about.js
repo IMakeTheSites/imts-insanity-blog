@@ -5,16 +5,17 @@ import Image from 'next/image';
 import ClientLogos from '@/components/ClientLogos';
 import Testimonial from '@/components/Testimonial';
 import Link from 'next/link';
-import GlobalHeader from '@/components/GlobalHeader';
+import Section from '@/components/Section/Section';
+import Cover from '@/components/Cover/Cover';
 
 function AboutPage() {
   return (
     <Page title="About">
       <div className={classes.About}>
-        <GlobalHeader name="About" />
-        <div className={classes.About__heading2}>
-          <h2>About I Make the Sites</h2>
-        </div>
+        <Section>
+          <Cover title="About" />
+        </Section>
+
         <div className={classes.About__text}>
           <p>
             When Mark Wlodawski created I Make the Sites in 2016 and then

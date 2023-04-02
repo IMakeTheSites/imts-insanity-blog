@@ -1,13 +1,16 @@
 import Page from '@/components/Page';
 import classes from '../styles/Contact.module.scss';
-import GlobalHeader from '@/components/GlobalHeader';
 import Form from '@/components/Form';
+import Section from '@/components/Section/Section';
+import Cover from '@/components/Cover/Cover';
 
 function ContactPage() {
   return (
     <Page title="Contact">
       <div className={classes.Contact}>
-        <GlobalHeader name="Contact" />
+        <Section>
+          <Cover title="Contact" />
+        </Section>
         <section className={classes.Contact__form}>
           <h3 className="text-lg text-justify">
             Please tell us about your project and how I can help.

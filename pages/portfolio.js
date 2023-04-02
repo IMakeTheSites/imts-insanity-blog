@@ -1,4 +1,3 @@
-import GlobalHeader from '@/components/GlobalHeader';
 import Page from '@/components/Page';
 import React from 'react';
 import classes from '../styles/Portfolio.module.scss';
@@ -10,6 +9,8 @@ import Work1 from '../public/portfolio1.png';
 import Work2 from '../public/portfolio2.png';
 import Work3 from '../public/portfolio3.png';
 import Work4 from '../public/portfolio4.png';
+import Section from '@/components/Section/Section';
+import Cover from '@/components/Cover/Cover';
 
 const workItems = [
   {
@@ -46,7 +47,9 @@ function PortfolioPage() {
   return (
     <Page title="Portfolio">
       <div className={classes.Work}>
-        <GlobalHeader name="Portfolio" />
+        <Section>
+          <Cover title="Portfolio" />
+        </Section>
 
         <div className={classes.Work__list}>
           {workItems.map((work, e) => (

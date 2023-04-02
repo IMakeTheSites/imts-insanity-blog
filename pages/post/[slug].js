@@ -10,25 +10,21 @@ import cl from 'classnames';
 import React from 'react';
 import { FaGreaterThan } from 'react-icons/fa';
 
-function urlFor(imageUrl) {
-  return imageUrlBuilder(client).image(imageUrl);
+function urlFor(source) {
+  return imageUrlBuilder(client).image(source);
 }
 
 const ptComponents = {
   types: {
-    image: ({ imageUrl }) => {
-      if (!imageUrl?.asset?._ref) {
+    image: ({ value }) => {
+      if (!value?.asset?._ref) {
         return null;
       }
       return (
         <img
-          alt={imageUrl.alt || ''}
+          alt={value.alt || ''}
           loading="lazy"
-          src={urlFor(imageUrl)
-            .width(320)
-            .height(240)
-            .fit('max')
-            .auto('format')}
+          src={urlFor(value).width(320).height(240).fit('max').auto('format')}
         />
       );
     },
@@ -36,12 +32,12 @@ const ptComponents = {
 };
 
 const Post = ({ className, post }) => {
-  const {
-    title = 'Missing a title',
-    name = 'Missing name',
-    imageUrl,
-    body = [],
-  } = post;
+  // const {
+  //   title = 'Missing a title',
+  //   name = 'Missing name',
+  //   imageUrl,
+  //   body = [],
+  // } = post;
 
   return (
     <div className="container py-5 px-3">
@@ -63,12 +59,12 @@ const Post = ({ className, post }) => {
       <Article className={styles.post}>
         <Title className={styles.postTitle}>{post.title}</Title>
         <div className={cl(className, styles.content)}>
-          {imageUrl && (
+          {post.imageUrl && (
             <div className={cl(className, styles.content)}>
-              <img src={urlFor(imageUrl).url()} alt="" />
+              <img src={urlFor(post.imageUrl).url()} alt="" />
             </div>
           )}
-          <PortableText value={body} components={ptComponents} />
+          <PortableText value={post.body} components={ptComponents} />
         </div>
       </Article>
     </div>
@@ -76,7 +72,7 @@ const Post = ({ className, post }) => {
 };
 
 const query = groq`*[_type == "post" && slug.current == $slug][0]{
-  title,
+title,
   "name": author->name,
   "categories": categories[]->title,
   "authorImage": author->image,
@@ -90,7 +86,7 @@ export async function getStaticPaths() {
   );
   return {
     paths: paths.map((slug) => ({ params: { slug } })),
-    fallback: true,
+    fallback: 'blocking',
   };
 }
 

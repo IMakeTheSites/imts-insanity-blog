@@ -6,7 +6,7 @@ import styles from './Post.module.scss';
 import Title from '../Title/Title';
 import { urlFor } from '../../lib/client';
 
-const Post = ({ className, image, title, description, slug }) => {
+const Post = ({ className, image, title = '', description, slug }) => {
   return (
     <Link
       href={`/post/${encodeURIComponent(slug.current)}`}

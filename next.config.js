@@ -8,8 +8,8 @@ module.exports = {
     domains: ['cdn.sanity.io'],
   },
   distDir: '.next',
-  webpack(config) {
-    config.experiments = { ...config.experiments, topLevelAwait: true };
-    return config;
-  },
+  // webpack(config) {
+  //   config.experiments = { ...config.experiments, topLevelAwait: true };
+  //   return config;
+  // },
 };

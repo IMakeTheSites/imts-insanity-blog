@@ -61,7 +61,7 @@ const Post = ({ className, post }) => {
       </nav>
 
       <Article className={styles.post}>
-        <Title className={styles.postTitle}>{title}</Title>
+        <Title className={styles.postTitle}>{post.title}</Title>
         <div className={cl(className, styles.content)}>
           {imageUrl && (
             <div className={cl(className, styles.content)}>

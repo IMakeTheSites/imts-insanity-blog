@@ -7,7 +7,6 @@ import Title from '../Title/Title';
 import { urlFor } from '../../lib/client';
 
 const Post = ({ className, image, title, description, slug }) => {
-  console.log(slug);
   return (
     <Link
       href={`/post/${encodeURIComponent(slug.current)}`}

@@ -13,7 +13,6 @@ import Button from '@/components/Button.js';
 const LOAD_MORE_STEP = 4;
 
 export default function BlogPage({ initialPosts, total, titlex, title }) {
-  console.log('{initialPosts}', initialPosts);
   const [posts, setPosts] = useState(initialPosts);
   const [loadedAmount, setLoadedAmount] = useState(LOAD_MORE_STEP);
   const [loading, setLoading] = useState(false);
@@ -32,7 +31,6 @@ export default function BlogPage({ initialPosts, total, titlex, title }) {
 
       setLoading(false);
     } catch (error) {
-      console.log(error);
       setLoading(false);
     }
   };

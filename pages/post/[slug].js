@@ -45,7 +45,6 @@ const Post = ({ className, post }) => {
     body = [],
   } = post;
 
-  console.log('post ===>', post);
   return (
     <div className="container py-5 px-3">
       <nav className="flex" aria-label="breadcrumb">
@@ -66,7 +65,7 @@ const Post = ({ className, post }) => {
         <Cover title="New Post" />
       </Section>
       <Article className={styles.post}>
-        <Title className={styles.postTitle}>{title}</Title>
+        <Title className={styles.postTitle}>{post.title}</Title>
         <div className={cl(className, styles.content)}>
           {imageUrl && (
             <div className={cl(className, styles.content)}>

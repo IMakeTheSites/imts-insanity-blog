@@ -63,10 +63,7 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="https://www.linkedin.com/company/i-make-the-sites/"
-                  target="_blank"
-                >
+                <a href="https://www.linkedin.com/in/markaiml/" target="_blank">
                   <svg
                     className={classes.Footer__list__icons__list__icon}
                     viewBox="0 0 16 16"
@@ -114,14 +111,14 @@ function Footer() {
           </div>
         </div>
         <div className={classes.Footer__list__call}>
-          <a href="mailto: info@imakethesites.com">
-            Mail: info@imakethesites.com
+          <a href="mailto: imakethesites@gmail.com">
+            Mail: imakethesites@gmail.com
           </a>
         </div>
       </div>
       <div className={classes.Footer__bottom}>
         <p className={classes.Footer__list__links__list}>
-          Copyright © 2021 <Link href="/">imakethesites.com</Link>
+          Copyright © 2024 <Link href="/">imakethesites.com</Link>
         </p>
       </div>
     </footer>

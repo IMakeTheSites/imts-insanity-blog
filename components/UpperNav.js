@@ -57,7 +57,7 @@ function UpperNav() {
               <Link href="/contact">Contact</Link>
             </li>
             <li className="text-white text-md font-bold">
-              <a href="mailto: info@imakethesites.com">
+              <a href="mailto: imakethesites@gmail.com">
                 {React.createElement(AiOutlineMail, {
                   color: 'black',
                   size: 40,

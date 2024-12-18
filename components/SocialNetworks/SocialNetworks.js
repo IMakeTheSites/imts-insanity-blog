@@ -17,7 +17,7 @@ const socialNetworks = [
   },
   {
     id: 2,
-    href: 'https://www.linkedin.com/company/i-make-the-sites/',
+    href: 'https://www.linkedin.com/in/markaiml/',
     icon: AiFillLinkedin,
   },
   {
